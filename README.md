@@ -2,7 +2,7 @@
 
 Created using template from Ebenzer Monney (https://github.com/emonney/QuickApp) provided with free licence
 
-Every class that does not conntain Ebenzer header is my creation
+Every class that does not conntain Ebenzer header is my creation or was updated by me in at least 50%
 
 # prerequisites
 dotnet --version  
@@ -19,6 +19,17 @@ cd src\QuickApp\ClientApp
 npm install --no-optional  
 cd ..  
 dotnet run environment=Development  
+
+# about
+Application shows simple solution to calculating installments.  
+Database connection is implemented, but is disabled.  
+To enable this funcionality uncomment seed async in Program.cs  
+and provide correct dbconn in appsettings.Development.json  
+  
+"ConnectionStrings": {  
+    "DefaultConnection": "here"  
+  }  
+
 
 ## License
 Oryginal QuickApp example license
