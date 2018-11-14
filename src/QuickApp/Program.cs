@@ -20,7 +20,8 @@ namespace QuickApp
                 try
                 {
                     var databaseInitializer = services.GetRequiredService<IDatabaseInitializer>();
-                    databaseInitializer.SeedAsync().Wait();
+                    //seed was removed due to removal of Database
+                    //databaseInitializer.SeedAsync().Wait();
                 }
                 catch (Exception ex)
                 {
