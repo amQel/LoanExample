@@ -1,0 +1,51 @@
+<div id="app_container" class="{{configurations.theme | lowercase}}-theme">
+  <ngx-toasta></ngx-toasta>
+  <div class='container'>
+    <nav id="header" class="app-component navbar navbar-inner navbar-fixed-top">
+      <nav class="container">
+        <div class="navbar-header">
+          <button type="button" class="app-component navbar-toggle collapsed" data-toggle="collapse" data-target=".menuItemsContainer.app-component" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a ngPreserveWhitespaces class="app-component navbar-brand" routerLink="/installment">
+            <span class="app-component appTitle">{{appTitle}}</span>
+          </a>
+        </div>
+      </nav>
+    </nav>
+
+    <div id="pre-bootstrap" *ngIf="!removePrebootScreen" [class.prebootShow.app-component]="!isAppLoaded" class="app-component prebootStep">
+      <div class="messaging">
+        <h1>
+          Loaded!
+        </h1>
+        <p>
+          Quick Installment Calculations - <span class="appName" style="font-style:italic">based on quick</span><span class="appName">App</span> &copy;
+        </p>
+
+      </div>
+    </div>
+
+    <div id="mainContent" class="app-component">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div id="footer">
+      <div class="app-component navbar-fixed-bottom navbar-inner footer">
+        <div class="container">
+          <footer>
+            <div class="app-component vcenter_text center-block">
+              <p class="text-center text-muted">
+                <span class="appName" style="font-style:italic">based on quick</span><span class="appName">App</span> &copy;
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

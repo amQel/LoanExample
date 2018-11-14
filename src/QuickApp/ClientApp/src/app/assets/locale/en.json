@@ -1,0 +1,20 @@
+{
+  "app": {
+    "Welcome": "Welcome",
+    "Notifications": "Notifications",
+    "New": "New"
+  },
+  "pageHeader": {
+    "Installment": "Installment Calculator"
+  },
+  "Installment": {
+    "Calculate": "Calculate",
+    "LoanValue": "Loan value",
+    "LoanLength": "Years",
+    "InstallmentType": "Installment type",
+    "InstallmentValue": "Value",
+    "InstallmentNumber": "Installment number",
+    "EqualType": "Equal",
+    "DecreasingType": "Decreasing"
+  }
+}

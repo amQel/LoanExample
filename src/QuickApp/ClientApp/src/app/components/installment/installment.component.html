@@ -1,0 +1,52 @@
+<div class="container">
+  <header class="pageHeader">
+    <h3> {{'pageHeader.Installment' | translate}}</h3>
+  </header>
+
+  <div [@fadeInOut]>
+    <form>
+      <div class="row">
+        <div class="col-lg-3">
+          <span class="field_label" id="loanValueLabel">{{'Installment.LoanValue' | translate}}: </span>
+          <input class="text_field" type="number" id="loanValue"
+                 name="loanValue" [(ngModel)]="loanValue"
+                 required min="1" (change)="setMinLoanValue()">
+        </div>
+        <div class="col-lg-3">
+          <span class="field_label" id="loanLengthLabel">{{'Installment.LoanLength' | translate}}: </span>
+          <input class="text_field" type="number" id="loanLength"
+                 name="loanLength" [(ngModel)]="loanLength"
+                 required min="1" (change)="setMinLoanLength()">
+        </div>
+        <div class="col-lg-6">
+          <span class="field_label" id="installmentType">{{'Installment.InstallmentType' | translate}}:</span>
+          <p-radioButton name="installmentType" [value]="InstallmentType.Equal" label="{{'Installment.EqualType' | translate}}" [(ngModel)]="installmentType" inputId="installmentTypeEqual"></p-radioButton>
+          <p-radioButton name="installmentType" [value]="InstallmentType.Decreasing" label="{{'Installment.DecreasingType' | translate}}" [(ngModel)]="installmentType" inputId="installmentTypeDecreasing"></p-radioButton>
+        </div>
+      </div>
+      <div class="row margin-top_10">
+        <div class="col-lg-12">
+          <button type="submit" class=" btn btn-success" (click)="calculateInstallment()">{{'Installment.Calculate' | translate}}</button>
+        </div>
+      </div>
+    </form>
+    <div class="row margin-top_10">
+      <div class="col-lg-12">
+        <p-table [value]="installments | async">
+          <ng-template pTemplate="header">
+            <tr>
+              <th> {{'Installment.InstallmentValue' | translate}} </th>
+              <th> {{'Installment.InstallmentNumber' | translate}} </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-installment>
+            <tr>
+              <td>{{installment.value}}</td>
+              <td>{{installment.installmentNumber}}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>
