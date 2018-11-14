@@ -1,6 +1,6 @@
 # **LoanExample** - ASPNET Core 2.1 / Angular 6 
 
-Created using template from Ebenzer Monney (https://github.com/emonney/QuickApp) provided with free licence:
+Created using template from Ebenzer Monney (https://github.com/emonney/QuickApp) provided with free licence
 
 Every class that does not conntain Ebenzer header is my creation
 
